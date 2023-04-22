@@ -1,0 +1,22 @@
+GET medias/_search
+{
+  "query": {
+    "term": {
+      "season": "fall-winter-2022"
+    }
+  }
+}
+
+
+GET medias/_search
+{
+  "query": {
+    "bool": {
+      "must_not": {
+        "term": {
+          "tags": "dress"
+        }
+      }
+    }
+  }
+}
